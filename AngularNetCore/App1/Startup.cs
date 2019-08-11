@@ -21,11 +21,13 @@ namespace App1
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
+            #region Link to client app. l1
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
                 configuration.RootPath = "ClientApp/dist";
-            });
+            }); 
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,10 +59,15 @@ namespace App1
 
                 spa.Options.SourcePath = "ClientApp";
 
+                #region invoke the command npm start
+                ///if the ng serve run flawlessly , it will create a plain HttpClient for proxy and use it to perform proxy 
+                ///(forward requests to Angular Dev Server with the plain HttpClient , and copy the response as it's own response) . 
+                ///The WebSocket proxy will take place in a similar way 
                 if (env.IsDevelopment())
                 {
                     spa.UseAngularCliServer(npmScript: "start");
-                }
+                } 
+                #endregion
             });
         }
     }
