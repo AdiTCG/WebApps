@@ -26,7 +26,7 @@ export class ListEmployeesComponent implements OnInit {
       gender: 'Male',
       phonenumber: 2231231,
       contactPreference: 'Phone',
-      dateofbirth: new Date('18/07/1990'),
+      dateofbirth: new Date('1990-4-4'),
       department: 'CPM',
       isActive: true,
       photoPath:'assets/images/dp.jpeg'
