@@ -1,0 +1,87 @@
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee(employeeForm)">
+    <div class="panel panel-primary">
+    <div class="panel-heading">
+        <h3 class="panel-heading">
+            Save Employee
+        </h3>
+    </div>
+    <div class="panel-body">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName" [(ngModel)]="fullName" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" [(ngModel)]="email" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNumber">Phone number</label>
+            <input id="phoneNumber" name="phoneNumber" [(ngModel)]="phoneNumber" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="contactPreference">Contact Preference</label>
+            <div class="form-control">
+                <label class="radio-inline">
+                    <input type="radio" value="Phone" name="contactPreference" [(ngModel)]="contactPreference">
+                    Phone
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="email" name="contactPreference" [(ngModel)]="contactPreference">
+                    Email
+                </label>
+            </div>
+        </div>
+
+        <!-- <div class="form-group">
+                <label for="dateOfBirth">Date of Birth</label>
+                <input id="dateOfBirth" [owlDateTimeTrigger]="dt3" [owlDateTime]="dt3" type="text" [(ngModel)]="dateOfBirth" name="dateOfBirth">
+                <owl-date-time [pickerType]="'calendar'" #dt3></owl-date-time>
+        </div> -->
+
+        <div class="form-group">
+            <label for="dateOfBirth">Date of Birth</label>
+            <input id="dateOfBirth" type="text" [bsConfig]="datePickerConfig" [(ngModel)]="dateOfBirth" name="dateOfBirth" bsDatepicker>
+        </div>
+
+        <div class="form-group">
+            <label for="gender">Gender</label>
+            <div class="form-control">
+                <label class="radio-inline">
+                    <input type="radio" value="male" name="gender" [(ngModel)]="gender">
+                    Male
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" value="female" name="gender" [(ngModel)]="gender">
+                    Female
+                </label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select id="department" name="department" [(ngModel)]="department" class="form-control">
+                <option *ngFor="let dept of depts" [value]="dept.id">
+                    {{dept.name}}
+                </option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <div class="form-control">
+                <label class="checkbox-inline" for="isActive">
+                <input type="checkbox" id="isActive" value="isActive" name="isActive" [(ngModel)]="isActive">Is Active
+                </label>
+            </div>
+        </div>
+
+            
+    </div>
+    <div class="panel-footer">
+        <button type="submit" class="btn btn-primary">Save</button>
+    </div>
+</div>
+</form>
+
+{{employeeForm.value | json}}
