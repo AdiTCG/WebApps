@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoProj.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,17 @@ namespace DemoProj.Controllers
 {
     public class CollegeController : ApiController
     {
-        // GET api/values
-        public IEnumerable<string> Get()
+        List<Department> departments = new List<Department>();
+        public CollegeController()
         {
-            return new string[] { "Dept1", "Dept2" };
+            departments.Add(new Department() { Id = 1, Hod = "KS" });
+            departments.Add(new Department() { Id = 2, Hod = "RS" });
+        }
+
+        // GET api/values
+        public IEnumerable<Department> Get()
+        {
+            return departments;
         }
     }
 }
