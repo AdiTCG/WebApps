@@ -16,7 +16,7 @@ namespace DemoProj.Controllers
             departments.Add(new Department() { Id = 2, Hod = "RS" });
         }
 
-        // GET api/values
+        [Route("Api/College/GetDepartments")]
         public IEnumerable<Department> Get()
         {
             return departments;
