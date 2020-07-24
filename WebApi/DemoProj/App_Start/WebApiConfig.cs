@@ -16,7 +16,7 @@ namespace DemoProj
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "default/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
