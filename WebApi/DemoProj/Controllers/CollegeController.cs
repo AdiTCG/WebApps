@@ -7,6 +7,9 @@ using System.Web.Http;
 
 namespace DemoProj.Controllers
 {
+    /// <summary>
+    /// Class is responsible to handle activities on college
+    /// </summary>
     public class CollegeController : ApiController
     {
         List<Department> departments = new List<Department>();
@@ -16,6 +19,10 @@ namespace DemoProj.Controllers
             departments.Add(new Department() { Id = 2, Hod = "RS" });
         }
 
+        /// <summary>
+        /// Get all the departments of the college
+        /// </summary>
+        /// <returns>Collection of dept</returns>
         [Route("Api/College/GetDepartments")]
         public IEnumerable<Department> Get()
         {
