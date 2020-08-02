@@ -9,7 +9,7 @@ namespace DemoProj.Models
     {
         public int Id { get; set; }
         public string Hod { get; set; }
-        public List<Student> Students { get; }
+        public List<Student> Students { get; set; }
         public Department()
         {
             Students = new List<Student>()
