@@ -58,7 +58,4 @@
     <Folder Include="Properties" />
     <Folder Include="Generated" />
   </ItemGroup>
-  <ItemGroup>
-    <Build Include="Generated\SqlDatabaseConnection.sql" />
-  </ItemGroup>
 </Project>

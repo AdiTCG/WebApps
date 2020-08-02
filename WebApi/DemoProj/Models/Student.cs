@@ -20,7 +20,7 @@ namespace DemoProj.Models
         }
 
         [Required]
-        public Department Department
+        public int DepartmentId
         {
             get; set;
         }

@@ -16,18 +16,27 @@
 
         protected override void Seed(DataAccessor.CollegeDbContext context)
         {
-            Department department = new Department()
+            Department cse = new Department()
             {
                 Students = new List<Student>()
                 {
-                    new Student() { Name = "Ranadip", Roll = 10 },
-                    new Student() { Name = "Subha", Roll = 3 },
-                    new Student() { Name = "Prateep", Roll = 8 },
-                    new Student() { Name = "Sourav", Roll = 12 }
-                }
+                    new Student() { Name = "Subha", Roll = 3, DepartmentId=2 },
+                    new Student() { Name = "Prateep", Roll = 8, DepartmentId=2 },
+                    new Student() { Name = "Sourav", Roll = 12, DepartmentId=2 }
+                },
+                Id = 2
             };
-
-            context.Departments.Add(department);
+            Department it = new Department()
+            {
+                Students = new List<Student>()
+                {
+                    new Student() { Name = "Ranadip", Roll = 10, DepartmentId=3 },
+                    new Student() { Name = "Suraj", Roll = 10, DepartmentId=3 },
+                },
+                Id = 3
+            };
+            context.Departments.Add(cse);
+            context.Departments.Add(it);
             base.Seed(context);
         }
     }
