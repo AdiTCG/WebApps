@@ -12,11 +12,6 @@ namespace DemoProj.Models
         public List<Student> Students { get; set; }
         public Department()
         {
-            Students = new List<Student>()
-            {
-                new Student(){Roll=1, Name="AA"},
-                new Student(){Roll=2, Name="BB"}
-            };
         }
     }
 }

@@ -12,11 +12,9 @@ namespace DemoProj.Controllers
     /// </summary>
     public class CollegeController : ApiController
     {
-        List<Department> departments = new List<Department>();
         public CollegeController()
         {
-            departments.Add(new Department() { Id = 1, Hod = "KS" });
-            departments.Add(new Department() { Id = 2, Hod = "RS" });
+
         }
 
         /// <summary>
@@ -26,7 +24,6 @@ namespace DemoProj.Controllers
         [Route("Api/College/GetDepartments")]
         public IEnumerable<Department> Get()
         {
-            return departments;
         }
     }
 }
