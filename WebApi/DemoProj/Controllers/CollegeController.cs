@@ -15,7 +15,7 @@ namespace DemoProj.Controllers
         public CollegeController()
         {
 
-        }
+        } 
 
         /// <summary>
         /// Get all the departments of the college
