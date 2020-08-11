@@ -1,4 +1,4 @@
-﻿using DemoProj.Models;
+﻿using DataModel.Models;
 using System.Data.Entity;
 
 namespace DataAccessor

@@ -12,6 +12,7 @@ namespace DemoProj
         public static IContainer Configure()
         {
             var builder = new ContainerBuilder();
+            //builder.RegisterType< ICollegeDbContext>
             return builder.Build();
         }
     }
