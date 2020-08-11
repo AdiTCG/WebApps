@@ -19,6 +19,7 @@ namespace DemoProj
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+            ContainerConfig.Configure();
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿using DemoProj.Models;
+﻿using DataAccessor;
+using DataModel.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
@@ -12,9 +14,15 @@ namespace DemoProj.Controllers
     /// </summary>
     public class CollegeController : ApiController
     {
+        private ICollegeDbContext _dbContext;
+
         public CollegeController()
         {
+        }
 
+        public CollegeController(ICollegeDbContext dbContext)
+        {
+            _dbContext = dbContext;
         }
 
         /// <summary>
@@ -24,7 +32,8 @@ namespace DemoProj.Controllers
         [Route("Api/College/GetDepartments")]
         public IEnumerable<Department> Get()
         {
-
+            var dept = _dbContext.Departments;
+            return dept;
         }
     }
 }

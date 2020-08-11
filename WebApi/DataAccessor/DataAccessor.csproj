@@ -77,10 +77,6 @@
       <Project>{DA3C4945-9714-4EB9-B131-E373C69BDA42}</Project>
       <Name>DataModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DemoProj\DemoProj.csproj">
-      <Project>{12FD874C-DB93-4E05-AD47-3F50A6F23207}</Project>
-      <Name>DemoProj</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202008021544316_Default_DepartmentAndStudent.resx">
