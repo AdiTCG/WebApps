@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollegeDbContext.cs" />
+    <Compile Include="ICollegeDbContext.cs" />
     <Compile Include="Migrations\202008021544316_Default_DepartmentAndStudent.cs" />
     <Compile Include="Migrations\202008021544316_Default_DepartmentAndStudent.designer.cs">
       <DependentUpon>202008021544316_Default_DepartmentAndStudent.cs</DependentUpon>

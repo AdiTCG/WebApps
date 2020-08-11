@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace DataAccessor
 {
-    public class CollegeDbContext : DbContext
+    public class CollegeDbContext : DbContext, ICollegeDbContext
     {
         public DbSet<Student> Students
         {

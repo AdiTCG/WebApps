@@ -15,7 +15,7 @@ namespace DemoProj.Controllers
         public CollegeController()
         {
 
-        } 
+        }
 
         /// <summary>
         /// Get all the departments of the college
@@ -24,6 +24,7 @@ namespace DemoProj.Controllers
         [Route("Api/College/GetDepartments")]
         public IEnumerable<Department> Get()
         {
+
         }
     }
 }
