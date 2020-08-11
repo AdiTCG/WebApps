@@ -10,7 +10,7 @@ using System.Web.Http;
 namespace DemoProj.Controllers
 {
     /// <summary>
-    /// Class is responsible to handle activities on college
+    /// Class is responsible to handle activities on college 
     /// </summary>
     public class CollegeController : ApiController
     {
